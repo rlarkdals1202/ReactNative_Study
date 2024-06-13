@@ -1,20 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import NumberButton from '@/Components/NumberButton';
 
 export default function App() {
+    const handleNumberButtonClick = (value: number) => {
+        console.log(value);
+    };
+
     return (
-        <View style={styles.container}>
-            <Text>Open up App.tsx to start working on your app!</Text>
-            <StatusBar style='auto' />
+        <View style={styles.layout}>
+            <StatusBar style={'auto'} />
+            <Text>Calculator Application</Text>
+            <NumberButton numberValue={0} onPress={handleNumberButtonClick} />
+            <NumberButton numberValue={1} onPress={handleNumberButtonClick} />
+            <NumberButton numberValue={2} onPress={handleNumberButtonClick} />
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    container: {
+    layout: {
         flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
         justifyContent: 'center',
+        alignItems: 'center',
     },
 });
