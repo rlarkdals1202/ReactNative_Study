@@ -1,9 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import NumberButton from '@/Components/NumberButton';
+import OperatorButton from '@/Components/OperatorButton';
 
 export default function App() {
     const handleNumberButtonClick = (value: number) => {
+        console.log(value);
+    };
+
+    const handleOperatorButtonClick = (value: string) => {
         console.log(value);
     };
 
@@ -14,6 +19,10 @@ export default function App() {
             <NumberButton numberValue={0} onPress={handleNumberButtonClick} />
             <NumberButton numberValue={1} onPress={handleNumberButtonClick} />
             <NumberButton numberValue={2} onPress={handleNumberButtonClick} />
+            <OperatorButton operatorValue={'+'} onPress={handleOperatorButtonClick} />
+            <OperatorButton operatorValue={'-'} onPress={handleOperatorButtonClick} />
+            <OperatorButton operatorValue={'×'} onPress={handleOperatorButtonClick} />
+            <OperatorButton operatorValue={'÷'} onPress={handleOperatorButtonClick} />
         </View>
     );
 }
