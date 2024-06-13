@@ -7,6 +7,7 @@ export default function App() {
     return (
         <View style={styles.layout}>
             <StatusBar style={'auto'} />
+            <ResultArea expression={'0'} />
             <ButtonArea />
         </View>
     );
