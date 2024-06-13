@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 interface Props {
@@ -7,6 +7,8 @@ interface Props {
 }
 
 export default function NumberButton({ numberValue, onPress }: Props) {
+    const { width, height } = useWindowDimensions();
+
     return (
         <Pressable
             onPress={() => {
@@ -17,7 +19,12 @@ export default function NumberButton({ numberValue, onPress }: Props) {
             }}
         >
             <LinearGradient colors={['#0284c7', '#0d9488']} start={{ x: -1, y: 0 }} end={{ x: 1, y: 0 }}>
-                <View style={[{ height: 100, width: numberValue === 0 ? 200 : 100 }, styles.numberButtonStyle]}>
+                <View
+                    style={[
+                        { height: height / 8, width: numberValue === 0 ? width / 2 : width / 4 },
+                        styles.numberButtonStyle,
+                    ]}
+                >
                     <Text style={styles.numberButtonTextStyle}>{numberValue}</Text>
                 </View>
             </LinearGradient>
