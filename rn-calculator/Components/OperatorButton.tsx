@@ -32,6 +32,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: '#cbd5e1',
         alignItems: 'center',
+        borderWidth: 2,
+        borderColor: 'white',
     },
 
     operatorButtonPressedStyle: {
