@@ -4,9 +4,10 @@ import OperatorButton from '@/Components/OperatorButton';
 
 interface Props {
     onNumberButtonPress(value: number): void;
+    onClearButtonPress(): void;
 }
 
-export default function ButtonArea({ onNumberButtonPress }: Props) {
+export default function ButtonArea({ onNumberButtonPress, onClearButtonPress }: Props) {
     const handleOperatorButtonPress = (value: string) => {
         console.log(value);
     };
@@ -29,7 +30,7 @@ export default function ButtonArea({ onNumberButtonPress }: Props) {
             <OperatorButton operatorValue={'-'} onPress={handleOperatorButtonPress} />
 
             <NumberButton numberValue={0} onPress={onNumberButtonPress} />
-            <OperatorButton operatorValue={'C'} onPress={handleOperatorButtonPress} />
+            <OperatorButton operatorValue={'C'} onPress={onClearButtonPress} />
             <OperatorButton operatorValue={'='} onPress={handleOperatorButtonPress} />
             <OperatorButton operatorValue={'+'} onPress={handleOperatorButtonPress} />
         </View>

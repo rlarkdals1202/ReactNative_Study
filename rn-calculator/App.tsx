@@ -17,11 +17,15 @@ export default function App() {
         setResult(Number(stringOperand));
     };
 
+    const handleClearButtonPress = () => {
+        setResult(0);
+    };
+
     return (
         <View style={styles.layout}>
             <StatusBar style={'auto'} />
             <ResultArea result={String(result)} />
-            <ButtonArea onNumberButtonPress={handleNumberButtonPress} />
+            <ButtonArea onNumberButtonPress={handleNumberButtonPress} onClearButtonPress={handleClearButtonPress} />
         </View>
     );
 }
