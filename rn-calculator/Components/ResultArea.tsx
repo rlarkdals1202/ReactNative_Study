@@ -1,13 +1,13 @@
 import { StyleSheet, Text, View } from 'react-native';
 
 interface Props {
-    expression: string;
+    result: string;
 }
 
-export default function ResultArea({ expression }: Props) {
+export default function ResultArea({ result }: Props) {
     return (
         <View style={styles.resultAreaLayoutStyle}>
-            <Text style={styles.expressionTextStyle}>{expression}</Text>
+            <Text style={styles.expressionTextStyle}>{result}</Text>
         </View>
     );
 }
