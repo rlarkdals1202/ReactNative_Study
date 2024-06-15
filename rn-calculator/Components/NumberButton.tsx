@@ -32,6 +32,8 @@ const styles = StyleSheet.create({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        borderWidth: 2,
+        borderColor: 'white',
     },
 
     numberButtonPressedStyle: {
