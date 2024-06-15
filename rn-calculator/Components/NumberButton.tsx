@@ -19,12 +19,7 @@ export default function NumberButton({ numberValue, onPress }: Props) {
             }}
         >
             <LinearGradient colors={['#0284c7', '#0d9488']} start={{ x: -1, y: 0 }} end={{ x: 1, y: 0 }}>
-                <View
-                    style={[
-                        { height: height / 8, width: numberValue === 0 ? width / 2 : width / 4 },
-                        styles.numberButtonStyle,
-                    ]}
-                >
+                <View style={[{ height: height / 8, width: width / 4 }, styles.numberButtonStyle]}>
                     <Text style={styles.numberButtonTextStyle}>{numberValue}</Text>
                 </View>
             </LinearGradient>
