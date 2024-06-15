@@ -29,6 +29,7 @@ export default function ButtonArea({ onNumberButtonPress }: Props) {
             <OperatorButton operatorValue={'-'} onPress={handleOperatorButtonPress} />
 
             <NumberButton numberValue={0} onPress={onNumberButtonPress} />
+            <OperatorButton operatorValue={'C'} onPress={handleOperatorButtonPress} />
             <OperatorButton operatorValue={'='} onPress={handleOperatorButtonPress} />
             <OperatorButton operatorValue={'+'} onPress={handleOperatorButtonPress} />
         </View>
