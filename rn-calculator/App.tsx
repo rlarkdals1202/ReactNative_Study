@@ -24,7 +24,7 @@ export default function App() {
     return (
         <View style={styles.layout}>
             <StatusBar style={'auto'} />
-            <ResultArea result={String(result)} />
+            <ResultArea result={result.toLocaleString()} />
             <ButtonArea onNumberButtonPress={handleNumberButtonPress} onClearButtonPress={handleClearButtonPress} />
         </View>
     );
