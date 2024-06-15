@@ -5,11 +5,23 @@ import ResultArea from '@/Components/ResultArea';
 import { useState } from 'react';
 
 export default function App() {
+    const [result, setResult] = useState(0);
+
+    const handleNumberButtonPress = (value: number) => {
+        let stringOperand: string;
+        if (result === 0) {
+            stringOperand = String(value);
+        } else {
+            stringOperand = `${result}${value}`;
+        }
+        setResult(Number(stringOperand));
+    };
+
     return (
         <View style={styles.layout}>
             <StatusBar style={'auto'} />
-            <ResultArea result={'0'} />
-            <ButtonArea />
+            <ResultArea result={String(result)} />
+            <ButtonArea onNumberButtonPress={handleNumberButtonPress} />
         </View>
     );
 }
